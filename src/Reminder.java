@@ -7,7 +7,7 @@ public class Reminder {
             try { wait();} catch (InterruptedException e) { System.out.println(e.getMessage());}
         }
         this.num = num;
-        System.out.println("V Put value " + num);
+        System.out.println("V Put value (Production) " + num);
         valueSet = true;
         notify();
     }
@@ -17,7 +17,7 @@ public class Reminder {
             try { wait();} catch (InterruptedException e) { System.out.println(e.getMessage());}
         }
         System.out.println(num);
-        System.out.println("> Get value " + num);
+        System.out.println("> Get value (Consumer)" + num);
         valueSet = false;
         notify();
     }
